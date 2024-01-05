@@ -27,19 +27,6 @@ const getProductsByCategory= async function(req,res){
         res.status(500).send({ status: false, msg: error.message });
     }
   }
-  const getProductsByName = async function(req,res){
-    try {
-        let productName = req.query.Name
-        console.log(productName)
-        if (!productName)
-            return res.status(400).send({ status: false, msg: "please give product Name" })
-  
-        let product = await ProductModel.find({Name: productName})       
-        return res.status(200).send({ status: true, message: "Success", data: product })
-    } catch (error) {
-        res.status(500).send({ status: false, msg: error.message });
-    }
-  }
   
 const getProduct= async function(req,res){
     try {
