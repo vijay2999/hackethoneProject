@@ -41,7 +41,7 @@ const getProduct= async function(req,res){
     }
   }
 
-  const deleteProduct = async function (req, res) {
+  const deleteProductById = async function (req, res) {
 
     try {
       let productId = req.params.productId
@@ -92,4 +92,4 @@ const getProduct= async function(req,res){
   }
 
 
-  module.exports={createproduct,getProductsByCategory,getProduct,deleteProduct,deleteCategory,getProductsByName}
+  module.exports={createproduct,getProductsByCategory,getProduct,deleteProductById,deleteCategory,getProductsByName}
