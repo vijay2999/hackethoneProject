@@ -12,7 +12,7 @@ router.post('/category',CategoryController.createCategory);
 router.post('/Products',ProductController.createproduct)
 router.get('/getProduct/:Category',ProductController.getProductsByCategory)
 router.get('/getProduct',ProductController.getProduct)
-router.delete("/Products/:productId", MW.authenticate,ProductController.deleteProduct);
+router.delete("/Products/:productId", MW.authenticate,ProductController.deleteProductById);
 router.delete("/deleteProducts", ProductController.deleteCategory);
 router.get('/getProduct',ProductController.getProductsByName)
 //router.post('/register',createuser,createUser)
